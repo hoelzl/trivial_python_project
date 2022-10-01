@@ -1,5 +1,6 @@
 from {{cookiecutter.project_package}}.__main__ import say_hi
 
+
 def test_main_function(capsys):
 	say_hi()
 	captured = capsys.readouterr()

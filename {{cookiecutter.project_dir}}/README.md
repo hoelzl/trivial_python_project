@@ -27,17 +27,27 @@ in the root directory.
 
 ## Working with the project
 
-The project is configured to run `pytest` tests. Tests are in the `tests`
-directory, outside the main package directory.  Therefore you have to install
-the package before running the tests. Once the package is installed, enter
-`pytest` in the root of the project to run the tests.
+The project is configured to run `pytest` tests and doctests. Source code for
+tests is in the `tests` directory, outside the main package directory. Therefore
+you have to make sure that your python interpreter can resolve the imports for
+the tests. The easiest way to ensure this is to install the package. You can run
+the tests from the root directory as follows:
+
+```shell script
+$ pytest
+```
 
 *Note:* If you install the package from a wheel, the tests will run against the
 installed package; install in editable mode (i.e., using the `-e` option) to
 test against the development package.
 
-To check that the package works correctly with different Python versions using
-`tox`. Currently versions 3.8, 3.9 and 3.10 are tested. Dependencies for `tox`
-are installed using `tox-conda`; remove the corresponding entry in the `tox.ini`
-file if you want to use `virtualenv` instead.
+To check that the package works correctly with different Python versions by executing
 
+```shell script
+$ tox
+```
+
+from the project's root directory. Currently Python versions 3.8, 3.9 and 3.10
+are tested. Dependencies for `tox` are installed using `tox-conda`; remove the
+corresponding entry in the `tox.ini` file if you want to use `virtualenv`
+instead.

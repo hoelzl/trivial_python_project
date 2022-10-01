@@ -2,6 +2,7 @@
     "cSpell.words": [
         "capsys",
         "cookiecutter",
+        "doctests",
         "pyproject",
         "pytest",
         "virtualenv"
