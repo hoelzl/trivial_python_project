@@ -1,8 +1,8 @@
 {
-	"project_dir": "MyAwesomeProject",
 	"project_package": "my_awesome_project",
+	"project_dir": "{{cookiecutter.project_package.replace(\"_\", \"-\")}}",
 	"author": "Dr. Matthias Hölzl",
 	"email": "tc@xantira.com",
 	"description": "An awesome project!",
-	"base_url": "https://github.com/hoelzl/{{cookiecutter.project_package}}/"
+	"base_url": "https://github.com/hoelzl/{{cookiecutter.project_package.replace(\"_\", \"-\")}}/"
 }
