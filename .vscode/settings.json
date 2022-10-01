@@ -5,6 +5,7 @@
         "doctests",
         "pyproject",
         "pytest",
+        "setuptools",
         "virtualenv"
     ]
 }
