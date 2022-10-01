@@ -1,6 +1,9 @@
 {
     "cSpell.words": [
         "capsys",
-        "cookiecutter"
+        "cookiecutter",
+        "pyproject",
+        "pytest",
+        "virtualenv"
     ]
 }
