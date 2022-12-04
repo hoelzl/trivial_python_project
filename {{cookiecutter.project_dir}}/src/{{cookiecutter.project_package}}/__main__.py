@@ -25,8 +25,8 @@ def say_hi(name="world"):
 
 
 def main():
-    parser = argparse.ArgumentParser(prog="simple-packaging",
-                                     description="A simple packaging example.",
+    parser = argparse.ArgumentParser(prog="{{cookiecutter.project_package.replace('_', '-')}}",
+                                     description="{{cookiecutter.description}}",
                                      epilog="Have fun!", )
     parser.add_argument("-n", "--name", default="world",
                         help="the name of the person to greet")
