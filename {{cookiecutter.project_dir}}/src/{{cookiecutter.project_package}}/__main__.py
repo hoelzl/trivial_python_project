@@ -1,3 +1,4 @@
+{% if cookiecutter.cli == "click" %}
 import click
 
 
@@ -13,3 +14,36 @@ def main(name):
 
 if __name__ == "__main__":
     main()
+
+{% elif cookiecutter.cli == "argparse" %}
+
+import argparse
+
+
+def say_hi(name="world"):
+    print(f"Hello, {name}!")
+
+
+def main():
+    parser = argparse.ArgumentParser(prog="simple-packaging",
+                                     description="A simple packaging example.",
+                                     epilog="Have fun!", )
+    parser.add_argument("-n", "--name", default="world",
+                        help="the name of the person to greet")
+    args = parser.parse_args()
+    say_hi(args.name)
+
+
+if __name__ == "__main__":
+    main()
+
+{% else %}
+
+def say_hi():
+    print(f"Hello, world!")
+
+
+if __name__ == "__main__":
+    say_hi()
+
+{% endif %}

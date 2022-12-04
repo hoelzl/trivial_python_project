@@ -4,5 +4,6 @@
 	"author": "Dr. Matthias Hölzl",
 	"email": "tc@xantira.com",
 	"description": "An awesome project!",
-	"base_url": "https://github.com/hoelzl/{{cookiecutter.project_package.replace(\"_\", \"-\")}}/"
+	"base_url": "https://github.com/hoelzl/{{cookiecutter.project_package.replace(\"_\", \"-\")}}/",
+	"cli": ["none", "argparse", "click"]
 }
