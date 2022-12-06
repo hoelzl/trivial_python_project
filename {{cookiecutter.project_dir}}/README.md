@@ -1,4 +1,4 @@
-# Package {{cookiecutter.project_package}}
+# {{cookiecutter.project_name}}
 
 {{cookiecutter.description}}
 
@@ -28,7 +28,7 @@ in the root directory.
 ## Working with the project
 
 The project is configured to run `pytest` tests and doctests. Source code for
-tests is in the `tests` directory, outside the main package directory. Therefore
+tests is in the `tests` directory, outside the main package directory. Therefore,
 you have to make sure that your python interpreter can resolve the imports for
 the tests. The easiest way to ensure this is to install the package. You can run
 the tests from the root directory as follows:
@@ -47,7 +47,7 @@ To check that the package works correctly with different Python versions by exec
 $ tox
 ```
 
-from the project's root directory. Currently Python versions 3.8, 3.9 and 3.10
+from the project's root directory. Currently, Python versions 3.8 to 3.11
 are tested. Dependencies for `tox` are installed using `tox-conda`; remove the
 corresponding entry in the `tox.ini` file if you want to use `virtualenv`
 instead.

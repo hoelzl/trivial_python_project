@@ -1,9 +1,11 @@
 {
 	"project_package": "my_awesome_project",
+	"project_name": "{{cookiecutter.project_package.replace(\"_\", \" \").title()}}",
 	"project_dir": "{{cookiecutter.project_package.replace(\"_\", \"-\")}}",
+	"executable_name": "{{cookiecutter.project_dir}}",
 	"author": "Dr. Matthias Hölzl",
 	"email": "tc@xantira.com",
 	"description": "An awesome project!",
-	"base_url": "https://github.com/hoelzl/{{cookiecutter.project_package.replace(\"_\", \"-\")}}/",
+	"base_url": "https://github.com/hoelzl/{{cookiecutter.project_dir}}/",
 	"cli": ["none", "argparse", "click"]
 }
