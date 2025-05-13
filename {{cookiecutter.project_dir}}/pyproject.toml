@@ -1,6 +1,55 @@
 [build-system]
 requires = [
-    "setuptools>=59",
-    "wheel"
+    "setuptools>=80.4.0",
+    "wheel",
 ]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{cookiecutter.project_package}}"
+version = "0.0.1"
+description = "{{cookiecutter.description}}"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "{{cookiecutter.author}}", email = "{{cookiecutter.email}}" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12"
+]
+dependencies = [
+{% if cookiecutter.cli == "click" and cookiecutter.default_dependencies %}
+    "attrs>=25.3",
+    "cattrs>=24.1",
+    "click>=8.2",
+    "platformdirs>=4.3.8",
+{% elif cookiecutter.cli == "click" %}
+    "click>=8.2",
+{% elif cookiecutter.default_dependencies %}
+    "attrs>=25.3",
+    "cattrs>=24.1",
+    "platformdirs>=4.3.8",
+{% endif %}
+]
+
+[project.urls]
+Homepage =  "{{cookiecutter.base_url}}"
+"Bug Tracker" = "{{cookiecutter.base_url}}issues"
+
+[project.scripts]
+{{cookiecutter.executable_name}} = "{{cookiecutter.project_package}}.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "pytest-mock>=3.14.0",
+    "tox>=4.25.0",
+]
