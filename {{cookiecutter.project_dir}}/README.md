@@ -3,7 +3,7 @@
 {{cookiecutter.description}}
 
 
-## Installation
+## Installation using setuptools
 
 To build the project use
 
@@ -25,7 +25,7 @@ pip install -e .
 ```
 in the root directory.
 
-## Working with the project
+## Working with the project using setuptools
 
 The project is configured to run `pytest` tests and doctests. Source code for
 tests is in the `tests` directory, outside the main package directory. Therefore,
@@ -51,3 +51,29 @@ from the project's root directory. Currently, Python versions 3.8 to 3.11
 are tested. Dependencies for `tox` are installed using `tox-conda`; remove the
 corresponding entry in the `tox.ini` file if you want to use `virtualenv`
 instead.
+
+## Working with the project using uv
+
+To build the project, use
+
+```shell script
+uv build
+```
+
+To run the executable, use
+
+```shell script
+uv run python -m {{cookiecutter.project_package}}
+```
+
+To run the tests, use
+
+```shell script
+uv run pytest
+```
+
+To run tox, use
+
+```shell script
+uv run tox
+```

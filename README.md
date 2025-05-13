@@ -1,7 +1,7 @@
 # A Cookiecutter Template for Simple Python Projects
 
 This is a template to generate simple Python projects that can be packaged and
-installed with setuptools.
+installed with setuptools and/or uv.
 
 I've tried to keep the configuration simple and understandable while including
 enough features to make the projects usable out of the box:
@@ -10,9 +10,6 @@ enough features to make the projects usable out of the box:
 - Configure pytest to run the project tests and doctests
 - Configure tox to test the projects with several Python versions
 - Configure bumpversion to manage project versions
-
-By default, the generated project uses conda to create virtual environments for
-tox, but that can easily be changed in `tox.ini`.
 
 Bumpversion is configured to *not* commit the updated files. This is the safer
 option but slightly inconvenient. To enable automatic commits, change
