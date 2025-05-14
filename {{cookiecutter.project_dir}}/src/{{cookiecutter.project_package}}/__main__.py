@@ -54,6 +54,9 @@ if __name__ == "__main__":
 
 {% else +%}
 
-if __name__ == "__main__":
+def main():
     say_hi()
+
+if __name__ == "__main__":
+    main()
 {% endif +%}

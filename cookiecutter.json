@@ -8,5 +8,5 @@
 	"description": "An awesome project!",
 	"base_url": "https://github.com/hoelzl/{{cookiecutter.project_dir}}/",
 	"cli": ["none", "argparse", "click", "typer"],
-	"default_dependencies": ["True", "False"]
+	"default_dependencies": ["False", "True"]
 }
