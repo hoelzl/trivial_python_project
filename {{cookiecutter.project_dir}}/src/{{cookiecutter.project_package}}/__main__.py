@@ -12,14 +12,24 @@ def version_callback(value: bool):
         raise typer.Exit()
 
 
-def main(name: Annotated[str, typer.Option(help="The name of the person to greet.")] = "world",
-         version: Annotated[
-             bool | None, typer.Option(help="Show the version and exit.", callback=version_callback)] = None, ):
+def typer_main(
+    name: Annotated[
+        str, typer.Option(help="The name of the person to greet.")
+    ] = "world",
+    version: Annotated[
+        bool | None,
+        typer.Option(help="Show the version and exit.", callback=version_callback),
+    ] = None,
+):
     say_hi(name)
 
 
+def main():
+    typer.run(typer_main)
+
+
 if __name__ == "__main__":
-    typer.run(main)
+    main()
 
 {% elif cookiecutter.cli == "click" +%}
 import click
