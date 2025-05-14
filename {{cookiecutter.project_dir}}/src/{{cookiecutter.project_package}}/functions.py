@@ -6,3 +6,7 @@ def fun_with_doctest(n: int) -> int:
     4
     """
     return n * 2
+
+
+def say_hi(name: str = "world"):
+    print(f"Hello, {name}!")
