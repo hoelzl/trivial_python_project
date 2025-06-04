@@ -29,7 +29,7 @@ dependencies = [
     "typer~=0.15.3",
     "click~=8.1.0", # Typer 0.15.x does not work with newer versions of click
 {% endif %}
-{% if cookiecutter.default_dependencies %}
+{% if cookiecutter.default_dependencies == "True" %}
     "attrs>=25.3",
     "cattrs>=24.1",
     "platformdirs>=4.3.8",
